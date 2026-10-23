@@ -71,4 +71,17 @@ const url = "https://cloudinary.com" + window.cloudName + "/image/list/" + windo
 }
 
 // Run this function instantly when the web page finishes loading structural frames
-window.onload = loadCloudinaryPhotos;
+// ==========================================
+// 3. RUN ON PAGE LOAD (FIXED FOR ALL PHOTOS)
+// ==========================================
+window.onload = function() {
+  // Set the dropdown menu default display value explicitly to "all"
+  const filterDropdown = document.getElementById("category-filter");
+  if (filterDropdown) {
+    filterDropdown.value = "all";
+  }
+  
+  // Run your main cloud delivery loop
+  loadCloudinaryPhotos();
+};
+
