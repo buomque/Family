@@ -1,8 +1,8 @@
 // ==========================================
 // 1. CLOUDINARY CONFIGURATION
 // ==========================================
-const cloudName = "dvrhzamw";       // 👈 Replace with your actual Cloud Name
-const tag = "Reo_family_photos";         // 👈 Replace with your exact Cloudinary tag
+window.cloudName = "dvrhzamw";       // 👈 Replace with your actual Cloud Name
+window.tag = "Reo_family_photos";         // 👈 Replace with your exact Cloudinary tag
 
 // ==========================================
 // 2. FETCH AND DISPLAY IMAGES
