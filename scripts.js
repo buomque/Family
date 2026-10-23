@@ -1,8 +1,8 @@
 // ==========================================
 // 1. CLOUDINARY CONFIGURATION
 // ==========================================
-window.cloudName = "dvrhzamw";       // 👈 Replace with your actual Cloud Name
-window.tag = "Reo_family_photos";         // 👈 Replace with your exact Cloudinary tag
+window.cloudName = window.cloudName || "dvrhzamw";       // 👈 Replace with your actual Cloud Name
+window.tag = window.tag || "Reo_family_photos";         // 👈 Replace with your exact Cloudinary tag
 
 // ==========================================
 // 2. FETCH AND DISPLAY IMAGES
@@ -11,7 +11,9 @@ function loadCloudinaryPhotos() {
   console.log("Scripts.js is running and connecting to Cloudinary...");
   
   // special URL asking Cloudinary for files sharing your tag
-  const url = `https://cloudinary.com{cloudName}/image/list/${tag}.json`;
+  // Ensure this line uses backticks (`), ://cloudinary.com, and has a $ symbol before BOTH variables!
+const url = `https://://cloudinary.com/${window.cloudName}/image/list/${window.tag}.json`;
+
 
   fetch(url)
     .then(response => {
