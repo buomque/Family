@@ -15,6 +15,7 @@ function loadCloudinaryPhotos() {
 const url = "https://cloudinary.com" + window.cloudName + "/image/list/" + window.tag + ".json";
 
 
+
   fetch(url)
     .then(response => {
       if (!response.ok) {
