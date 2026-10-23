@@ -43,6 +43,7 @@ function loadCloudinaryPhotos() {
         
         // Create a new image card element dynamically
         const imgElement = document.createElement("img");
+        imgElement.loading = "eager"; // 👈 Forces the browser to load it immediately
         imgElement.src = imageUrl;
         imgElement.alt = "Family Memory";
         imgElement.className = "gallery-thumb"; // You can use this class in your CSS to style your image sizes
