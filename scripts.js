@@ -12,8 +12,7 @@ function loadCloudinaryPhotos() {
   
   // special URL asking Cloudinary for files sharing your tag
   // Ensure this line uses backticks (`), ://cloudinary.com, and has a $ symbol before BOTH variables!
-const url = `https://cloudinary.com/${window.cloudName}/image/list/${window.tag}.json`;
-
+const url = `https://cloudinary.com{window.cloudName}/image/list/${window.tag}.json`;
 
   fetch(url)
     .then(response => {
